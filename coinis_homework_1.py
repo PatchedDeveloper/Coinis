@@ -84,8 +84,8 @@ import math
 # Napisati program koji racuna kvadrat trinoma(a, b, c) koja za unijete parametre a, b i c računa kvadrat trinoma za unešene parametre. Formula: 𝑎^2 + 𝑏^2 + 𝑐^2 + 2𝑎𝑏 + 2𝑎𝑐 + 2𝑏c
 
 # def task_6(a,b,c):
-#     x = pow(a,2) + pow(b,2) + pow(c,2) + 2*a*b + 2*a*c + 2*b*c
-#     print(f'Result {x}')
+#     result = pow(a,2) + pow(b,2) + pow(c,2) + 2*a*b + 2*a*c + 2*b*c
+#     print(f'Result {result}')
 
 
 # task_6(int(input("Enter variable a: ")), int(input("Enter variable b: ")),int(input("Enter variable c: ")))
