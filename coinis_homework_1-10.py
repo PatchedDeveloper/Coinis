@@ -111,12 +111,12 @@ import math
 # Napisati program kojim se izračunava potrebna dužina trake za ivicu stoljnjaka kružnog
 # oblika čija je površina P.
 
+
 # def task_8(P):
 
 #     pi = 3.14
-#     R = math.sqrt(P * pi)
-#     L = 2* pi * R
-#     print(f'Result : {L}')
+#     L = (4 * P * pi) ** 0.5
+#     print(f"Result : {L}")
 
 
 # task_8(int(input("Enter P: ")))
@@ -136,24 +136,24 @@ import math
 # task_9(int(input('Enter D: ')),int(input('Enter S: ')),int(input('Enter S: ')))
 
 
-#----------------------------------------------------------------
+# ----------------------------------------------------------------
 
 # task_10
-#Date su koordinate donje desne i gornje lijeve ivice zida (pravougaonik). Izračunati
+# Date su koordinate donje desne i gornje lijeve ivice zida (pravougaonik). Izračunati
 # povrsinu i obim zida.
 
-def task_10(x1, x2, y1, y2):
-    a = x1 - x2
-    b = y2 - y1
+# def task_10(x1, x2, y1, y2):
+#     a = x1 - x2
+#     b = y2 - y1
 
-    p = (a + b) * 2
-    s = a * b
-    print(f"P = {p} :S = {s}")
+#     p = (a + b) * 2
+#     s = a * b
+#     print(f"P = {p} :S = {s}")
 
 
-task_10(
-    int(input("Enter x1: ")),
-    int(input("Enter x2: ")),
-    int(input("Enter y1: ")),
-    int(input("Enter y2: ")),
-)
+# task_10(
+#     int(input("Enter x1: ")),
+#     int(input("Enter x2: ")),
+#     int(input("Enter y1: ")),
+#     int(input("Enter y2: ")),
+# )
