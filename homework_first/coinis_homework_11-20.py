@@ -120,7 +120,7 @@ from datetime import datetime
 
 # ----------------------------------------------------------------
 
-# task_15
+# # task_15
 # def task_15(x1, y1, x2, y2, x3, y3):
 
 #     a1 = abs(x1 - x2)
@@ -227,18 +227,18 @@ from datetime import datetime
 # osnovu poznatog trocifrenog broja možete pronaći kod koji otvara tajna vrata tako što od
 # proizvoda cifara tog broja oduzmete zbir cifara istog broja.
 
-def task_20(number):
+# def task_20(number):
 
-    first = int(number[0])
-    second = int(number[1])
-    third = int(number[2])
+#     first = int(number[0])
+#     second = int(number[1])
+#     third = int(number[2])
 
-    summ = first + second + third
-    multiplication = first * second * third
+#     summ = first + second + third
+#     multiplication = first * second * third
 
-    result = multiplication - summ
+#     result = multiplication - summ
 
-    print(result)
+#     print(result)
 
 
-task_20(input("Enter 3-th number "))
+# task_20(input("Enter 3-th number "))
