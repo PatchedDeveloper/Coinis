@@ -22,7 +22,7 @@ from datetime import datetime
 #     print(f"Result = {result}")
 
 
-# task_21(input("Enter 4-th number "))
+# task_21(input("Enter 4 digit num "))
 
 
 # ----------------------------------------------------------------
@@ -127,7 +127,7 @@ from datetime import datetime
 #     print(f"Floor : {floor}")
 
 
-# task_26(input("Enter 4-th num : "))
+# task_26(input("Enter 4 digit num : "))
 
 # ----------------------------------------------------------------
 # task27
@@ -148,7 +148,7 @@ from datetime import datetime
 #     print(sqr)
 
 
-# task_27(input("Enter 4-th num : "))
+# task_27(input("Enter 4 digit num : "))
 
 # ----------------------------------------------------------------
 # task28
@@ -166,7 +166,7 @@ from datetime import datetime
 #     print(f'New var = {new_var}')
 
 
-# task_28(input("Enter 3-th num : "))
+# task_28(input("Enter 3 digit num : "))
 
 # ----------------------------------------------------------------
 # task29
@@ -181,9 +181,9 @@ from datetime import datetime
 
 #     x3 = (x1+x2) / 2
 #     y3 = (y1+y2) / 2
-    
+
 #     c= math.sqrt(pow(x3,2) + pow(y3,2))
- 
+
 #     print(f'\nThe coordinates of the meeting : x = {x3}, y = {y3},\nDistance = {c}')
 
 # task_29(
@@ -194,3 +194,126 @@ from datetime import datetime
 # )
 # ----------------------------------------------------------------
 # task30
+
+# Dimenzije pravougaonika su 543 i 130. Koliko kvadrata stranice 65 je moguće
+# izrezati iz tog pravougaonika?
+
+# def task_30():
+#     width = 130
+#     height = 543
+
+#     s= height*width
+#     result = int(s /60)
+
+#     print (result)
+
+# task_30()
+
+# ----------------------------------------------------------------
+# task31
+# Napisati program koji računa površinu ekrana monitora pravougaonog oblika,
+# ukoliko je poznata dužina njegove dijagonale (d = 50) i odnos stranica (aspect
+# ratio = 16:9).
+
+# def task_31():
+#     d = 50
+#     a = 16
+#     b = 9
+
+#     width = math.sqrt((pow(d, 2) * pow(a, 2)) / (pow(a, 2) + pow(b, 2)))
+#     height = (width * b) / a
+
+#     screen_area = width * height
+
+#     print('Screen Area:', screen_area)
+
+
+# task_31()
+
+# ----------------------------------------------------------------
+# task32
+# Dat je šestocifreni broj n (n=abcdef). Provjeriti da li važi a* c + 2 + f = b + d*e.
+# Pomoć: razmisliti o provjeri uslova (boolean operator) - samostalno isprobati
+# implementaciju iste u Python-u. Ovo ćemo svakako raditi tokom naredne
+# sedmice.
+
+# def task_32(n):
+
+#     if len(n) == 6:
+#              first = int(n[0])
+#              second = int(n[1])
+#              third = int(n[2])
+#              fourth = int(n[3])
+#              fifth = int(n[4])
+#              sixth = int(n[5])
+
+#              if first * third + 2 + sixth == second + fourth * fifth:
+#                print(True)
+#              else:
+#                 print(False)
+#     else:
+#         print('wrong number')
+
+
+# task_32(input('Enter a 6 digit number: '))
+
+
+# ----------------------------------------------------------------
+# task33
+# Napisati program koji provjerava koliko se poligona kvadratnog oblika i zadatih
+# dimenzija može kreirati na jednoj poljani za koju su poznate njena širina i dužina.
+
+# def task_33(width,height,square):
+
+#     s = height * width
+#     result = int(s / square)
+
+#     print(f'Result = {result}')
+
+
+# task_33(int(input('Enter a Width:')),int(input('Enter a Height:')),int(input('Enter a Square:')))
+
+
+# ----------------------------------------------------------------
+# task34
+
+# Dobili ste zadatak da generišete specijalni identifikacioni broj za pristup tajnom
+# laboratorijskom sektoru. Otkrili ste da se identifikacioni broj može dobiti na
+# osnovu poznatog šestocifrenog broja tako što se kvadrira suma cifara tog broja,
+# a zatim od tog rezultata oduzme proizvod treće i četvrte cifre istog broja. Kao
+# rezultat prikazati identifikacioni broj.
+
+# def task_34(n):
+#     if len(n) == 6:
+#         first = int(n[0])
+#         second = int(n[1])
+#         third = int(n[2])
+#         fourth = int(n[3])
+#         fifth = int(n[4])
+#         sixth = int(n[5])
+
+#         sum = first + second + third + fourth + fifth + sixth
+#         multiplication = third * fourth
+#         result = pow(sum, 2) - multiplication
+#         print(result)
+
+#     else:
+#         print("wrong number")
+
+
+# task_34(input("Enter a 6 digit number: "))
+
+
+# ----------------------------------------------------------------
+# task35
+# Dat je petocifreni prirodan broj koji predstavlja broj stambene jedinice u zgradi.
+# Na osnovu zadatog broja potrebno je odrediti sprat na kome se nalazi stambena
+# jedinica. Poznato je da se to može otkriti kada se na vrijednost srednje cifre
+# zadatog broja doda vrijednost poslednje cifre. Štampati taj zbir.
+
+def task_35(num):
+    floor = int(num[2]) + int(num[4])
+
+    print(f"Floor : {floor}")
+
+task_35(input('Enter 5 digit number: '))
