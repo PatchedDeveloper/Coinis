@@ -110,3 +110,48 @@ from error_handling import Enum
 # ----------------------------------------------------------------
 # task_48
 
+# def task_48(x, n):
+#     m = 1
+#     for _ in range(n):
+#         m *= x
+#         print(m)
+
+
+# task_48(
+#     int(input("Enter x: ")),
+#     int(input("Enter n: ")),
+# )
+
+# ----------------------------------------------------------------
+# task_49
+
+
+# def task_49(text, limit):
+
+#     if len(text) > limit:
+#         short_text = text[:limit] + "..."
+#         print(short_text)
+#     else:
+#         print(text + "...")
+
+
+# task_49(input("Enter text: "), int(input("Enter limit number: ")))
+
+
+# ----------------------------------------------------------------
+# task_50
+
+# def task_50(s):
+#     encrypted_string = ""
+#     consonants = set("aeioиu")
+
+#     for char in s:
+#         if char in consonants:
+#             encrypted_string += char
+#         else:
+#             continue
+
+#     print(encrypted_string)
+
+
+# task_50(input("Enter string: ").lower())

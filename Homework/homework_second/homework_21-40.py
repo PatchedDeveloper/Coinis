@@ -101,7 +101,7 @@ from error_handling import Enum
 
 
 # def task_27(str):
-#     samoglas = ["a", "e", "j", "i", "o", "q", "y", "u"]
+#     samoglas = ["a", "e", "i", "o","u"]
 
 #     for char in str:
 #         if char in samoglas:
@@ -176,20 +176,19 @@ from error_handling import Enum
 # ----------------------------------------------------------------
 # task_31
 
-# def task_31(start,end):
+
+# def task_31(start, end):
 
 #     total_sum = 0
 
 #     for num in range(start, end + 1):
 #         if num % 2 == 0 and num % 4 != 0:
-#             total_sum += pow(num,2)
+#             total_sum += pow(num, 2)
 
 #     print("Sum, in the range ", start, "to", end, "=", total_sum)
 
-# task_31(
-#     int(input("Enter the initial value: ")),
-#     int(input("Enter the final value: "))
-# )
+
+# task_31(int(input("Enter the initial value: ")), int(input("Enter the final value: ")))
 
 # ----------------------------------------------------------------
 # task_32
