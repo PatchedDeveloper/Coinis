@@ -155,3 +155,26 @@ from error_handling import Enum
 
 
 # task_50(input("Enter string: ").lower())
+
+
+# ----------------------------------------------------------------
+# task_51
+
+# def task_51(password):
+
+#     lower = False
+#     upper = False
+
+#     for i in range(len(password)):
+#         if password[i].islower():
+#             lower = True
+#         elif password[i].isupper():
+#             upper = True
+             
+#     if not (password.isdigit()) and (lower == True) and (upper == True):
+#         print(f"Your password is valid")
+#     else:
+#         print(f"Your password is not invalid")
+
+
+# task_51(input("Enter your password: "))
