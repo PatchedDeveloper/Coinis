@@ -433,6 +433,7 @@ from error_handling import Enum
 # ----------------------------------------------------------------
 # task_20
 
+
 def task_20(num):
     x = int(num[0])
     y = int(num[1])
@@ -440,26 +441,39 @@ def task_20(num):
     c = int(num[3])
 
     sum = 0
-    multiply = 1
+    multiply = 0
 
-    if x % 2 == 0:
-        sum += x
-    else:
-        multiply = multiply * x
-    if y % 2 == 0:
-        sum += y
-    else:
-        multiply = multiply * y
-    if z % 2 == 0:
-        sum += z
-    else:
-        multiply = multiply * z
-    if c % 2 == 0:
-        sum += c
-    else:
-        multiply = multiply * c
+    if int(num) % 2 == 0:
+        if x % 2 == 0:
+            sum += x
+        if y % 2 == 0:
+            sum += y
+        if z % 2 == 0:
+            sum += z
+        if c % 2 == 0:
+            sum += c
+        print(f"Sum = {sum} , Multiplication = {multiply}")
 
-    print(f"Sum = {sum} , Multiplication = {multiply}")
+    else:
+        multiply += 1
+        if x % 2 == 0:
+            print("x % 2 == 0")
+        else:
+            multiply = multiply * x
+        if y % 2 == 0:
+            print("y % 2 == 0")
+        else:
+            multiply = multiply * y
+        if z % 2 == 0:
+            print("z % 2 == 0")
+        else:
+            multiply = multiply * z
+        if c % 2 == 0:
+            print("c % 2 == 0")
+        else:
+            multiply = multiply * c
+        print(f"Sum = {sum} , Multiplication = {multiply}")
+
 
 task_20(
     input("Enter 4-th digit number : "),
