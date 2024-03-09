@@ -289,7 +289,6 @@ from error_handling import Enum
 #     else:
 #         print(print(int(str_num[1]) * int(str_num[0])))
 
-        
 
 # task_12(input('Enter number: '))
 
@@ -316,15 +315,15 @@ from error_handling import Enum
 # def task_14(first,second,third):
 
 #     x = first + second
-#     y = first + third  
-#     z = second + third  
+#     y = first + third
+#     z = second + third
 
 #     if x < y and x < z:
 #         print(f'Low is first + second {x}')
 #     elif y < x and y < z:
-#         print(f'Low is first + third {y}')  
-#     elif z < y and z < x:  
-#         print(f'Low is second + third {z}') 
+#         print(f'Low is first + third {y}')
+#     elif z < y and z < x:
+#         print(f'Low is second + third {z}')
 
 # task_14(int(input('Enter 1: ')),int(input('Enter 2: ')),int(input('Enter 2: ')))
 
@@ -332,10 +331,136 @@ from error_handling import Enum
 # task_15
 
 # def task_15(year):
-    
+
 #     if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
 #         print(f"{year} - leap year")
 #     else:
 #         print(f"{year} - is not a leap year")
 
 # task_15(int(input('Enter year: ')))
+
+# ----------------------------------------------------------------
+# task_16
+
+# def task_16(x1, y1, x2, y2, x, y):
+
+#     if (x2>x>x1) and (y2<y<y1):
+#         print("The point lies inside the rectangle.")
+#     else:
+#         print("The point does not lie inside the rectangle.")
+
+# task_16(
+# # rectangle
+# int(input("Enter the x top-left : ")),
+# int(input("Enter the y top-left : ")),
+# int(input("Enter the x bottom-right : ")),
+# int(input("Enter the y bottom-right : ")),
+
+# # point
+# int(input("Enter the x for point: ")),
+# int(input("Enter the y for point: ")),
+
+# )
+
+# ----------------------------------------------------------------
+# task_17
+
+
+# def task_17(a, b):
+
+#     if a + a <= b:
+#         print("Yes you can")
+#     else:
+#         print("No you cannot")
+
+
+# task_17(
+#     int(input("Enter side a (height) : ")),
+#     int(input("Enter side b (width) : ")),
+# )
+
+# ----------------------------------------------------------------
+# task_18
+
+# def task_18(temp):
+
+#     if temp > 0 and temp < 100:
+#      print('Above 0°C and below 100°C - liquid state')
+#     elif temp <= 0:
+#         print('Not above 0°C - solid state')
+#     elif temp > 100:
+#        print('Not below 100°C - gaseous state.')
+
+# task_18(
+#     int(input("Enter temperature : ")),
+# )
+
+# ----------------------------------------------------------------
+# task_19
+
+# def task_19(sum, points, reward):
+
+#     if points == 5.0:
+#         print(f"Discount 40%")
+#         sum = sum - (sum * 0.40)
+#         print(f'You need to pay : {sum}')
+#     elif 4.0 <= points < 5.0:
+#         if reward == 1:
+#             print(f"Discount 30%")
+#             sum = sum - (sum * 0.30)
+#             print(f'You need to pay : {sum}')
+#         else:
+#             print(f"Discount 20%")
+#             sum = sum - (sum * 0.20)
+#             print(f'You need to pay : {sum}')
+#     elif 3.0 <= points < 4.0:
+#         if reward == 1:
+#             print(f"Discount 30%")
+#             sum = sum - (sum * 0.30)
+#             print(f'You need to pay : {sum}')
+#         else:
+#             print(f"Discount 10%")
+#             sum = sum - (sum * 0.10)
+#             print(f'You need to pay : {sum}')
+
+
+# task_19(
+#     float(input("Enter school sum :")),
+#     float(input("Enter student middle point (2.0 - 5.0) :")),
+#     int(input("Enter reward (1- Yes , 0 -No) :")),
+# )
+
+# ----------------------------------------------------------------
+# task_20
+
+def task_20(num):
+    x = int(num[0])
+    y = int(num[1])
+    z = int(num[2])
+    c = int(num[3])
+
+    sum = 0
+    multiply = 1
+
+    if x % 2 == 0:
+        sum += x
+    else:
+        multiply = multiply * x
+    if y % 2 == 0:
+        sum += y
+    else:
+        multiply = multiply * y
+    if z % 2 == 0:
+        sum += z
+    else:
+        multiply = multiply * z
+    if c % 2 == 0:
+        sum += c
+    else:
+        multiply = multiply * c
+
+    print(f"Sum = {sum} , Multiplication = {multiply}")
+
+task_20(
+    input("Enter 4-th digit number : "),
+)
