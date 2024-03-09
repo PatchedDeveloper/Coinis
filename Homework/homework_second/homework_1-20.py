@@ -182,34 +182,160 @@ from error_handling import Enum
 # task_9
 
 
-def task_9():
+# def task_9():
 
-    print("Enter window parametrs {\n}")
-    x1 = int(input("Enter x1: "))
-    y1 = int(input("Enter y1: "))
-    x2 = int(input("Enter x2: "))
-    y2 = int(input("Enter y2: "))
-    print("Enter curtain parametrs {\n}")
-    x3 = int(input("Enter x1: "))
-    y3 = int(input("Enter y1: "))
-    x4 = int(input("Enter x2: "))
-    y4 = int(input("Enter y2: "))
-
-
-
-    aw = x2-x1
-    bw = y2 - y1
-
-    ac = pow((x4 - x3), 2)
-    bc = pow((y4 - y3), 2)
-
-    dw = math.sqrt(pow(aw,2) + pow(bw,2))
-    dc = math.sqrt(ac + bc)
-
-    if dc > dw:
-        print("Yes")
-    else:
-        print("No")
+#     print("Enter window parametrs {\n}")
+#     x1 = int(input("Enter x1: "))
+#     y1 = int(input("Enter y1: "))
+#     x2 = int(input("Enter x2: "))
+#     y2 = int(input("Enter y2: "))
+#     print("Enter curtain parametrs {\n}")
+#     x3 = int(input("Enter x1: "))
+#     y3 = int(input("Enter y1: "))
+#     x4 = int(input("Enter x2: "))
+#     y4 = int(input("Enter y2: "))
 
 
-task_9()
+#     aw = x2-x1
+#     bw = y2 - y1
+
+#     ac = pow((x4 - x3), 2)
+#     bc = pow((y4 - y3), 2)
+
+#     dw = math.sqrt(pow(aw,2) + pow(bw,2))
+#     dc = math.sqrt(ac + bc)
+
+#     if dc > dw:
+#         print("Yes")
+#     else:
+#         print("No")
+
+
+# task_9()
+
+# ----------------------------------------------------------------
+# task_10
+
+
+# def task_10():
+
+#     radius_darts = int(input("Enter radius dart:"))
+#     dart_x = int(input("Enter dart x:"))
+#     dart_y = int(input("Enter dart y:"))
+#     target_x = int(input("Enter target x:"))
+#     target_y = int(input("Enter target y:"))
+
+#     # radius
+#     d = math.sqrt(pow(target_x, 2) + pow(target_y, 2))
+
+#     if (dart_x - radius_darts <= target_x <= dart_x + radius_darts) and (dart_y - radius_darts <= target_y <= dart_y + radius_darts):
+#         if d <= radius_darts:
+#          print("Good shot!")
+#         else:
+#             print("Miss shot!")
+
+#     else:
+#         print("Arrow not in range")
+
+
+# task_10()
+
+# ----------------------------------------------------------------
+# task_11
+
+
+# def task_11():
+#     # Ant
+#     ant_x = int(input("Enter ant x: "))
+#     ant_y = int(input("Enter ant y: "))
+
+#     # A point
+#     ax = int(input("Enter A x: "))
+#     ay = int(input("Enter A y: "))
+
+#     # B point
+#     bx = int(input("Enter B x: "))
+#     by = int(input("Enter B y: "))
+
+#     # C point
+#     cx = ax
+#     cy = by
+
+#     # D point
+#     dx = bx
+#     dy = ay
+
+#     if (ax <= ant_x <= bx or bx <= ant_x <= ax) and (ay <= ant_y <= cy or cy <= ant_y <= ay):
+#         if (cx <= ant_x <= dx or dx <= ant_x <= cx) and (by <= ant_y <= dy or dy <= ant_y <= by):
+#             print("yes")
+#         else:
+#             print("no")
+#     else:
+#         print("no")
+
+# task_11()
+
+# ----------------------------------------------------------------
+# task_12
+
+# def task_12(str_num):
+
+#     if int(str_num[0]) > int(str_num[1]):
+#         print(print(int(str_num[0]) - int(str_num[1])))
+
+#     elif int(str_num[0]) < int(str_num[1]):
+#         print(print(int(str_num[1]) + int(str_num[0])))
+
+#     else:
+#         print(print(int(str_num[1]) * int(str_num[0])))
+
+        
+
+# task_12(input('Enter number: '))
+
+# ----------------------------------------------------------------
+# task_13
+
+# def task_13(radius_1,radius_2):
+
+#     pi = 3.14
+#     if radius_1 > radius_2:
+#             result =  3.12 * pow (radius_1,2)
+#             print(f'S for First  = {result} ')
+#     elif radius_1 < radius_2:
+#             result =  3.12 * pow (radius_2,2)
+#             print(f'S for Second  = {result} ')
+#     else:
+#            print('They are equal')
+
+# task_13(int(input('Enter radius for 1: ')),int(input('Enter radius for 2: ')))
+
+# ----------------------------------------------------------------
+# task_14
+
+# def task_14(first,second,third):
+
+#     x = first + second
+#     y = first + third  
+#     z = second + third  
+
+#     if x < y and x < z:
+#         print(f'Low is first + second {x}')
+#     elif y < x and y < z:
+#         print(f'Low is first + third {y}')  
+#     elif z < y and z < x:  
+#         print(f'Low is second + third {z}') 
+
+# task_14(int(input('Enter 1: ')),int(input('Enter 2: ')),int(input('Enter 2: ')))
+
+# ----------------------------------------------------------------
+# task_15
+
+# def task_15(year):
+    
+#     if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
+#         print(f"{year} - leap year")
+#     else:
+#         print(f"{year} - is not a leap year")
+
+# task_15(int(input('Enter year: ')))
