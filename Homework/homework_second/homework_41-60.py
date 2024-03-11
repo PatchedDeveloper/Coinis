@@ -334,38 +334,3 @@ from error_handling import Enum
 
 
 # task_60(int(input("Enter the initial value: ")), int(input("Enter the final value: ")))
-
-# ----------------------------------------------------------------
-# task_61
-
-# def task_61(text):
-
-#     new_text = ''
-#     for i in range(len(text)):
-#         if text[i].isupper():
-#             new_text += text[i]
-
-#     print(new_text)
-# task_61(
-#     input("Enter text: ")
-# )
-
-# ----------------------------------------------------------------
-# task_62
-
-# def task_62(text):
-
-#     sum = 0
-
-#     text = text.split(" ")
-#     print(text)
-#     for number in text:
-#         if number.startswith("0x"):
-#             sum += 1
-#     print("Sum: ", sum)
-
-
-# task_62(input("Enter text: "))
-
-# ----------------------------------------------------------------
-# task_63
