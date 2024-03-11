@@ -165,16 +165,93 @@ from error_handling import Enum
 #     lower = False
 #     upper = False
 
-#     for i in range(len(password)):
-#         if password[i].islower():
-#             lower = True
-#         elif password[i].isupper():
-#             upper = True
-             
-#     if not (password.isdigit()) and (lower == True) and (upper == True):
-#         print(f"Your password is valid")
+#     if len(password)< 100:
+#         for i in range(len(password)):
+#             if password[i].islower():
+#               lower = True
+#             elif password[i].isupper():
+#               upper = True
+#         if not (password.isdigit()) and (lower == True) and (upper == True):
+#            print(f"Your password is valid")
+#         else:
+#             print(f"Your password is not invalid")
 #     else:
-#         print(f"Your password is not invalid")
-
+#         print(f"Your password is too long")
 
 # task_51(input("Enter your password: "))
+
+# ----------------------------------------------------------------
+# task_52
+
+# def task_52(a,pre,suf,num):
+
+#     new_string = ''
+#     i = 0
+
+#     while i < num:
+#         new_string += pre
+#         i+=1;
+#     new_string += a
+#     for j in range(num):
+#         new_string += suf
+#     print(new_string)
+
+# task_52(
+#     input('Enter text: '),
+#     input('Enter prefix: '),
+#     input('Enter sufix:'),
+#     int(input('Enter number: '))
+# )
+
+# ----------------------------------------------------------------
+# task_53
+
+# def task_53(n):
+#     sum = 0
+
+#     for i in range(len(n)):
+#         sum += int(n[i])
+
+#     print(sum)
+
+
+# task_53(input("Enter number: "))
+
+# ----------------------------------------------------------------
+# task_54
+
+# def task_54(n, index):
+#     length = len(n)
+
+#     if index == 0:
+#         if n[1] == "1":
+#             print("First symbol, next is occupied")
+#         else:
+#             print("First symbol, next is free")
+#     elif index == length - 1:
+#         if n[index - 1] == "1":
+#             print("Last symbol, previous is occupied")
+#         else:
+#             print("Last symbol, previous is free")
+#     else:
+#         if n[index - 1] == n[index + 1] and n[index - 1] == "1":
+#             print("neighboring symbols is occupied")
+#         else:
+#             print(Neighboring symbols is free")
+
+# task_54(input("Enter string: "), int(input("Enter index: ")))
+
+# ----------------------------------------------------------------
+# task_55
+
+# def task_55(h, o):
+
+#     max = h // 2
+#     print(f"Max: {max}")
+
+# task_55(int(input("Enter H: ")), int(input("Enter O: ")))
+
+# ----------------------------------------------------------------
+# task_56
+
+def 
