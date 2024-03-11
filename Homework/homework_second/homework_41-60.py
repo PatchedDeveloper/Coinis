@@ -254,4 +254,118 @@ from error_handling import Enum
 # ----------------------------------------------------------------
 # task_56
 
-def 
+# def task_56():
+
+#     sum = 0
+#     numbers = "+23-2-32+4-22-4"
+#     split_numbers = numbers.replace("+", " +").replace("-", " -").split()
+#     for number in split_numbers:
+#         if number.startswith("-") and len(number) == 2:
+#             sum += 1
+#     print(sum)
+
+# task_56()
+
+# ----------------------------------------------------------------
+# task_57
+
+# def task_57(number):
+#     num_str = str(number)
+#     num_digits = len(num_str)
+
+#     digit_sum = sum(int(digit) ** num_digits for digit in num_str)
+
+#     if digit_sum == number:
+#         print("Yes")
+#     else:
+#         print("No")
+
+
+# task_57(int(input("Enter number: ")))
+
+# ----------------------------------------------------------------
+# task_58
+
+# def task_58(text):
+
+#     digit_string = ""
+
+#     for char in text:
+#         if char.isdigit():
+#             digit_string += char
+#     integer_result = int(digit_string)
+
+#     print("Digit string :", integer_result)
+
+# task_58(input('Enter Text: '))
+
+# ----------------------------------------------------------------
+# task_59
+
+# def task_59(s):
+#     encrypted_string = ""
+
+#     for char in s:
+#         if char.isdigit():
+#             num = int(char)
+#             if num % 2 == 0:
+#                 encrypted_string += "0"
+#             else:
+#                 encrypted_string += "1"
+
+#     print(encrypted_string)
+
+
+# task_59(input('Enter string: '))
+
+
+# ----------------------------------------------------------------
+# task_60
+
+# def task_60(start, end):
+
+#     total_sum = 0
+
+#     for num in range(start, end + 1):
+#         if num % 3 == 0 and num % 6 != 0:
+#             total_sum += pow(num, 2)
+
+#     print("Sum, in the range ", start, "to", end, "=", total_sum)
+
+
+# task_60(int(input("Enter the initial value: ")), int(input("Enter the final value: ")))
+
+# ----------------------------------------------------------------
+# task_61
+
+# def task_61(text):
+
+#     new_text = ''
+#     for i in range(len(text)):
+#         if text[i].isupper():
+#             new_text += text[i]
+
+#     print(new_text)
+# task_61(
+#     input("Enter text: ")
+# )
+
+# ----------------------------------------------------------------
+# task_62
+
+# def task_62(text):
+
+#     sum = 0
+
+#     text = text.split(" ")
+#     print(text)
+#     for number in text:
+#         if number.startswith("0x"):
+#             sum += 1
+#     print("Sum: ", sum)
+
+
+# task_62(input("Enter text: "))
+
+# ----------------------------------------------------------------
+# task_63
