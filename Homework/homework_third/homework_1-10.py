@@ -187,105 +187,208 @@ import re
 
 # ----------------------------------------------------------------
 # TASK 7
-class Library:
+# class Library:
 
-    class Book:
-        def __init__(self, name, author, year_publication, number_of_copies):
-            self.name = name
-            self.author = author
-            self.year_publication = year_publication
-            self.number_of_copies = number_of_copies
+#     class Book:
+#         def __init__(self, name, author, year_publication, number_of_copies):
+#             self.name = name
+#             self.author = author
+#             self.year_publication = year_publication
+#             self.number_of_copies = number_of_copies
 
-    array_book = []
+#     array_book = []
 
-    # setters
-    def add_new_book():
-        name = input("Enter book name: ")
-        author = input("Enter book author: ")
-        year_publication = input("Enter book year publication: ")
-        number_of_copies = int(input("Enter number of copies: "))
+#     # setters
+#     def add_new_book():
+#         name = input("Enter book name: ")
+#         author = input("Enter book author: ")
+#         year_publication = input("Enter book year publication: ")
+#         number_of_copies = int(input("Enter number of copies: "))
 
-        new_book = Library.Book(name, author, year_publication, number_of_copies)
+#         new_book = Library.Book(name, author, year_publication, number_of_copies)
 
-        Library.array_book.append(new_book)
+#         Library.array_book.append(new_book)
 
-    def delete_book():
-        name = input("Enter book name what do you want delete: ")
-        for book in Library.array_book:
-            if book.name == name:
-                Library.array_book.remove(book)
-                print("Book deleted")
-                break
+#     def delete_book():
+#         name = input("Enter book name what do you want delete: ")
+#         for book in Library.array_book:
+#             if book.name == name:
+#                 Library.array_book.remove(book)
+#                 print("Book deleted")
+#                 break
+#         else:
+#             print("Book not found")
+
+#     def edit_book():
+#         name = input("Enter book name you want to change: ")
+
+#         for book in Library.array_book:
+#             if book.name == name:
+#                 new_name = input(
+#                     f"Enter new book name (if you don't want change - press enter): "
+#                 )
+#                 new_author = input(
+#                     f"Enter new book author (if you don't want change - press enter): "
+#                 )
+#                 new_year_publication = input(
+#                     f"Enter new year publication (if you don't want change - press enter): "
+#                 )
+#                 new_number_of_copies = input(
+#                     f"Enter new number copies (if you don't want change - press enter): "
+#                 )
+
+#                 if new_name.strip():
+#                     book.name = new_name
+#                 if new_author.strip():
+#                     book.author = new_author
+#                 if new_year_publication.strip():
+#                     book.year_publication = new_number_of_copies
+#                 if new_number_of_copies.strip():
+#                     book.number_of_copies = new_number_of_copies
+
+#                 print("Book edited")
+#                 break
+#         else:
+#             print("Book not found")
+
+#     # getters
+#     def get_all_books():
+#         print("All books: ")
+#         print("___________")
+#         for book in Library.array_book:
+#             print(
+#                 f"Name :{book.name} \nAuthor: {book.author} \nYear publication: {book.year_publication} \nNumber Copies: {book.number_of_copies}"
+#             )
+#         print("___________")
+
+#     def search_book_by_name():
+#         name = input("Enter book name: ")
+#         for book in Library.array_book:
+#             if book.name == name:
+#                 print(
+#                     f"Name :{book.name} \nAuthor: {book.author} \nYear publication: {book.year_publication} \nNumber Copies: {book.number_of_copies}"
+#                 )
+#                 print("___________")
+#         else:
+#             print("Book not found")
+
+#     def search_book_by_author():
+#         author = input("Enter book name: ")
+#         for book in Library.array_book:
+#             if book.author == author:
+#                 print(
+#                     f"Name :{book.name} \nAuthor: {book.author} \nYear publication: {book.year_publication} \nNumber Copies: {book.number_of_copies}"
+#                 )
+#                 print("___________")
+#         else:
+#             print("Book not found")
+
+
+# Library.add_new_book()
+# Library.add_new_book()
+# Library.get_all_books()
+# Library.edit_book()
+# Library.get_all_books()
+
+# ----------------------------------------------------------------
+# TASK 8
+
+
+# Player
+class Player:
+
+    def __init__(self, x, y, width, height, health):
+        self.x = x
+        self.y = y
+        self.width = width
+        self.height = height
+        self.health = health
+
+    # Player
+    def add_player_parameters():
+        print("\nPlayer Parameters \n")
+        x = input("Enter x parameter for player: ")
+        y = input("Enter y parameter for player: ")
+        width = input("Enter width parameter for player: ")
+        height = input("Enter height parameter for player: ")
+        health = int(input("Enter health parameter for player: "))
+
+        if 0 <= health <= 100:
+            return Player(x, y, width, height, health)
+            print("Player parameters added")
         else:
-            print("Book not found")
+            print("Error: player health parameter")
+            return None
 
-    def edit_book():
-        name = input("Enter book name you want to change: ")
 
-        for book in Library.array_book:
-            if book.name == name:
-                new_name = input(
-                    f"Enter new book name (if you don't want change - press enter): "
-                )
-                new_author = input(
-                    f"Enter new book author (if you don't want change - press enter): "
-                )
-                new_year_publication = input(
-                    f"Enter new year publication (if you don't want change - press enter): "
-                )
-                new_number_of_copies = input(
-                    f"Enter new number copies (if you don't want change - press enter): "
-                )
+# Enemy
 
-                if new_name.strip():
-                    book.name = new_name
-                if new_author.strip():
-                    book.author = new_author
-                if new_year_publication.strip():
-                    book.year_publication = new_number_of_copies
-                if new_number_of_copies.strip():
-                    book.number_of_copies = new_number_of_copies
+# Array of enemies
+Enemies = []
 
-                print("Book edited")
-                break
+
+class Enemy:
+
+    def __init__(self, x, y, width, height, damage):
+        self.x = x
+        self.y = y
+        self.width = width
+        self.height = height
+        self.damage = damage
+
+    def add_enemy_parameters():
+        print("\nEnemy Parameters \n")
+        x = input("Enter x parameter for enemy: ")
+        y = input("Enter y parameter for enemy: ")
+        width = input("Enter width parameter for enemy: ")
+        height = input("Enter height parameter for enemy: ")
+        damage = int(input("Enter damage parameter for enemy: "))
+
+        if 0 <= damage <= 100:
+            new_enemy = Enemy(x, y, width, height, damage)
+            Enemies.append(new_enemy)
+            return new_enemy
         else:
-            print("Book not found")
+            print("Error: Enemy damage parameter")
+            return None
 
-    # getters
-    def get_all_books():
-        print("All books: ")
-        print("___________")
-        for book in Library.array_book:
-            print(
-                f"Name :{book.name} \nAuthor: {book.author} \nYear publication: {book.year_publication} \nNumber Copies: {book.number_of_copies}"
-            )
-        print("___________")
 
-    def search_book_by_name():
-        name = input("Enter book name: ")
-        for book in Library.array_book:
-            if book.name == name:
-                print(
-                    f"Name :{book.name} \nAuthor: {book.author} \nYear publication: {book.year_publication} \nNumber Copies: {book.number_of_copies}"
-                )
-                print("___________")
+# Functions for game
+def decreate_health(player_health, enemy_damage):
+    player_x = player_health.x
+    enemy_x = enemy_damage.x
+
+    def check_collision(player, enemy):
+        if player.x == enemy.x:
+            print("The players collided")
+            return True
         else:
-            print("Book not found")
+            print("No collision")
+            return False
 
-    def search_book_by_author():
-        author = input("Enter book name: ")
-        for book in Library.array_book:
-            if book.author == author:
-                print(
-                    f"Name :{book.name} \nAuthor: {book.author} \nYear publication: {book.year_publication} \nNumber Copies: {book.number_of_copies}"
-                )
-                print("___________")
-        else:
-            print("Book not found")
+    is_collision = check_collision(player_health, enemy_damage)
+
+    if is_collision:
+        player_health.health -= enemy_damage.damage
+        print(f"Health: {player_health.health}")
+        return player_health.health
+    else:
+        print("Miss")
+        return player_health.health
 
 
-Library.add_new_book()
-Library.add_new_book()
-Library.get_all_books()
-Library.edit_book()
-Library.get_all_books()
+def get_all_enemies():
+    print("All Enemies: ")
+    print("___________")
+    for enemy in Enemies:
+        print(
+            f"X coordinate: {enemy.x}\nY coordinate: {enemy.y}\nWidth: {enemy.width}\nHeight: {enemy.height}\nDamage: {enemy.damage}\n"
+        )
+    print("___________")
+
+
+player = Player.add_player_parameters()
+enemy1 = Enemy.add_enemy_parameters()
+enemy2 = Enemy.add_enemy_parameters()
+
+get_all_enemies()
