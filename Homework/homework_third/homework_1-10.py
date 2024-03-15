@@ -2,7 +2,7 @@ import math
 import random
 import re
 
-# Coinis_homework_3
+# Coinis_homework_3 by Danila Kardashevskii
 
 # Domaći zadatak 3
 
@@ -114,3 +114,22 @@ import re
 #     return name_podcast
 
 # print(Podcasts())
+
+# ----------------------------------------------------------------
+# TASK 6
+
+
+class Tv:
+    current_chanel = 0  # to lenght
+    name_channel = ""  # enter name channel
+    all_channels = [""]  # all avarage channels
+    volume = []
+
+    #initialize first start tv
+    def initialize():
+        Tv.current_chanel = 1
+        Tv.name_channel = "First"
+        Tv.all_channels = [""]
+        Tv.volume.append(1)
+
+    def 
