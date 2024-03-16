@@ -552,10 +552,37 @@ class Color:
 
 
 color1 = Color(50, 100, 150)
-color2 = Color(50, 100, 150)
-Color.str(color1)
-Color.eq(color1, color2)
 
 
 # ----------------------------------------------------------------
 # # TASK 11
+class AlphaColor(Color):
+
+    def __init__(self, color, alpha):
+        super().__init__(color.get_red(), color.get_green(), color.get_blue())
+        self.set_alpha(alpha)
+
+    def set_alpha(self, alpha):
+        if 0 <= alpha <= 1:
+            self.alpha = alpha
+        else:
+            print("Error: Enter number between 0 and 1.")
+
+    def get_alpha(self):
+        return self.alpha
+
+    def update_color_by_alpha(self):
+        self.red = int(self.red * self.alpha)
+        self.green = int(self.green * self.alpha)
+        self.blue = int(self.blue * self.alpha)
+
+    def str(self):
+        print(
+            f"Red: {self.red}, Green: {self.green}, Blue: {self.blue}, Alpha: {self.alpha}"
+        )
+
+
+color2 = AlphaColor(color1, 1.0) 
+color2.set_alpha(0.5) 
+color2.update_color_by_alpha()  
+color2.str()  
