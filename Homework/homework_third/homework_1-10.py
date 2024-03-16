@@ -2,11 +2,8 @@ import math
 import random
 import re
 
-
 # Coinis_homework_3 by Danila Kardashevskii
-
 # Domaći zadatak 3
-
 
 # ----------------------------------------------------------------
 # TASK 1
@@ -69,6 +66,29 @@ import re
 # ----------------------------------------------------------------
 # TASK 3
 
+# def find_longest_zigzag_subsequence(lst):
+#     max_length = 0
+#     length = 1
+#     result = []
+#     n = len(lst)
+
+#     for i in range(n - 1):
+#         if (i % 2 == 0 and lst[i] < lst[i + 1]) or (i % 2 == 1 and lst[i] > lst[i + 1]):
+#             length += 1
+#         else:
+#             if length > max_length:
+#                 max_length = length
+#                 result = lst[i - length + 1 : i + 1]
+#             length = 1
+
+#     if length > max_length:
+#         result = lst[n - length :]
+
+#     return result
+
+# lst = [3, 1, 4, 2, 8, 6, 5, 7]
+# result = find_longest_zigzag_subsequence(lst)
+# print(result)
 
 # ----------------------------------------------------------------
 # TASK 4
@@ -293,102 +313,249 @@ import re
 # ----------------------------------------------------------------
 # TASK 8
 
+# # Player
+# class Player:
 
-# Player
-class Player:
+#     def __init__(self, x, y, width, height, health):
+#         self.x = x
+#         self.y = y
+#         self.width = width
+#         self.height = height
+#         self.health = health
 
-    def __init__(self, x, y, width, height, health):
-        self.x = x
-        self.y = y
-        self.width = width
-        self.height = height
-        self.health = health
+#     # Player
+#     def add_player_parameters():
+#         print("\nPlayer Parameters \n")
+#         x = input("Enter x parameter for player: ")
+#         y = input("Enter y parameter for player: ")
+#         width = input("Enter width parameter for player: ")
+#         height = input("Enter height parameter for player: ")
+#         health = int(input("Enter health parameter for player: "))
 
-    # Player
-    def add_player_parameters():
-        print("\nPlayer Parameters \n")
-        x = input("Enter x parameter for player: ")
-        y = input("Enter y parameter for player: ")
-        width = input("Enter width parameter for player: ")
-        height = input("Enter height parameter for player: ")
-        health = int(input("Enter health parameter for player: "))
+#         if 0 <= health <= 100:
+#             return Player(x, y, width, height, health)
+#             print("Player parameters added")
+#         else:
+#             print("Error: player health parameter")
+#             return None
 
-        if 0 <= health <= 100:
-            return Player(x, y, width, height, health)
-            print("Player parameters added")
+
+# # Enemy
+
+# # Array of enemies
+# Enemies = []
+
+
+# class Enemy:
+
+#     def __init__(self, x, y, width, height, damage):
+#         self.x = x
+#         self.y = y
+#         self.width = width
+#         self.height = height
+#         self.damage = damage
+
+#     def add_enemy_parameters():
+#         print("\nEnemy Parameters \n")
+#         x = input("Enter x parameter for enemy: ")
+#         y = input("Enter y parameter for enemy: ")
+#         width = input("Enter width parameter for enemy: ")
+#         height = input("Enter height parameter for enemy: ")
+#         damage = int(input("Enter damage parameter for enemy: "))
+
+#         if 0 <= damage <= 100:
+#             new_enemy = Enemy(x, y, width, height, damage)
+#             Enemies.append(new_enemy)
+#             return new_enemy
+#         else:
+#             print("Error: Enemy damage parameter")
+#             return None
+
+
+# # Functions for game
+# def decreate_health(player_health, enemy_damage):
+#     player_x = player_health.x
+#     enemy_x = enemy_damage.x
+
+#     def check_collision(player, enemy):
+#         if player.x == enemy.x:
+#             print("The players collided")
+#             return True
+#         else:
+#             print("No collision")
+#             return False
+
+#     is_collision = check_collision(player_health, enemy_damage)
+
+#     if is_collision:
+#         player_health.health -= enemy_damage.damage
+#         print(f"Health: {player_health.health}")
+#         return player_health.health
+#     else:
+#         print("Miss")
+#         return player_health.health
+
+
+# def get_all_enemies():
+#     print("All Enemies: ")
+#     print("___________")
+#     for enemy in Enemies:
+#         print(
+#             f"X coordinate: {enemy.x}\nY coordinate: {enemy.y}\nWidth: {enemy.width}\nHeight: {enemy.height}\nDamage: {enemy.damage}\n"
+#         )
+#     print("___________")
+
+
+# player = Player.add_player_parameters()
+# enemy1 = Enemy.add_enemy_parameters()
+# enemy2 = Enemy.add_enemy_parameters()
+
+# get_all_enemies()
+
+
+# ----------------------------------------------------------------
+# # TASK 9
+
+# class Tournament:
+
+#     def __init__(self, tournament_name, number_of_rounds):
+#         self.tournament_name = tournament_name
+#         self.player_list = []
+#         self.number_of_rounds = number_of_rounds
+
+
+#     #Getters
+#     def get_tournament_name(self):
+#         return self.tournament_name
+
+#     def get_number_of_rounds(self):
+#         return self.number_of_rounds
+
+#     def get_player_list(self):
+#         return self.player_list
+
+#     #Setters
+#     def set_tournament_name(self, tournament_name):
+#         self.tournament_name = tournament_name
+
+#     def set_player_list(self, player_list):
+#         self.player_list = player_list
+
+#     def set_number_of_rounds(self, number_of_rounds):
+#         if 0 < number_of_rounds < 10:
+#             self.number_of_rounds = number_of_rounds
+#         else:
+#             print("Error: Number of rounds must be between 1 and 9.")
+
+
+#     # Functions
+
+#     def add_player(self, player_name):
+#         self.player_list.append((player_name, 0))
+
+#     def remove_player(self, player_name):
+#         for player in self.player_list:
+#             if player[0] == player_name:
+#                 self.player_list.remove(player)
+#                 break
+
+#     def show_leader(self):
+#         if not self.player_list:
+#             print("No players in the tournament.")
+#             return
+
+#         leader = max(self.player_list, key=lambda x: x[1])
+#         print(f"The current leader is: {leader[0]} with {leader[1]} points.")
+
+#     def start_round(self):
+#         if len(self.player_list) < 2:
+#             print("Need at least 2 players to start a round.")
+#             return
+
+#         player1, player2 = random.sample(self.player_list, 2)
+#         winner = player1 if random.random() < 0.6 else player2
+
+#         print(f"Round started between {player1[0]} and {player2[0]}.")
+#         print(f"The winner is: {winner[0]}")
+#         winner_index = self.player_list.index(winner)
+#         self.player_list[winner_index] = (winner[0], winner[1] + 1)
+#         print(f"{winner[0]} gained 1 point.")
+#         self.number_of_rounds += 1
+
+# tournament = Tournament("Chess Tournament", 5)
+# tournament.add_player("Alice")
+# tournament.add_player("Bob")
+# tournament.add_player("Charlie")
+
+# tournament.start_round()
+# tournament.show_leader()
+
+
+# ----------------------------------------------------------------
+# # TASK 10
+
+
+class Color:
+
+    def __init__(self, red, green, blue):
+        self.red = red
+        self.green = green
+        self.blue = blue
+
+    def validate_color(color):
+        if 0 <= color <= 255:
+            return color
         else:
-            print("Error: player health parameter")
-            return None
+            print("Error: Enter number between 0 до 255.")
+            return 0
 
+    def add_red(self, change):
+        self.red = Color.validate_color(self.red + change)
 
-# Enemy
+    def add_green(self, change):
+        self.green = Color.validate_color(self.green + change)
 
-# Array of enemies
-Enemies = []
+    def add_blue(self, change):
+        self.blue = Color.validate_color(self.blue + change)
 
+    def get_red(self):
+        return self.red
 
-class Enemy:
+    def get_green(self):
+        return self.green
 
-    def __init__(self, x, y, width, height, damage):
-        self.x = x
-        self.y = y
-        self.width = width
-        self.height = height
-        self.damage = damage
+    def get_blue(self):
+        return self.blue
 
-    def add_enemy_parameters():
-        print("\nEnemy Parameters \n")
-        x = input("Enter x parameter for enemy: ")
-        y = input("Enter y parameter for enemy: ")
-        width = input("Enter width parameter for enemy: ")
-        height = input("Enter height parameter for enemy: ")
-        damage = int(input("Enter damage parameter for enemy: "))
-
-        if 0 <= damage <= 100:
-            new_enemy = Enemy(x, y, width, height, damage)
-            Enemies.append(new_enemy)
-            return new_enemy
-        else:
-            print("Error: Enemy damage parameter")
-            return None
-
-
-# Functions for game
-def decreate_health(player_health, enemy_damage):
-    player_x = player_health.x
-    enemy_x = enemy_damage.x
-
-    def check_collision(player, enemy):
-        if player.x == enemy.x:
-            print("The players collided")
+    def it(self, other):
+        if self.red < other.red and self.green < other.green and self.blue < other.blue:
+            print("True")
             return True
         else:
-            print("No collision")
+            print("False")
             return False
 
-    is_collision = check_collision(player_health, enemy_damage)
+    def eq(self, other):
+        if (
+            self.red == other.red
+            and self.green == other.green
+            and self.blue == other.blue
+        ):
+            print("True")
+            return True
+        else:
+            print("False")
+            return False
 
-    if is_collision:
-        player_health.health -= enemy_damage.damage
-        print(f"Health: {player_health.health}")
-        return player_health.health
-    else:
-        print("Miss")
-        return player_health.health
-
-
-def get_all_enemies():
-    print("All Enemies: ")
-    print("___________")
-    for enemy in Enemies:
-        print(
-            f"X coordinate: {enemy.x}\nY coordinate: {enemy.y}\nWidth: {enemy.width}\nHeight: {enemy.height}\nDamage: {enemy.damage}\n"
-        )
-    print("___________")
+    def str(self):
+        print(f"Red: {self.red}, Green: {self.green}, Blue: {self.blue}")
 
 
-player = Player.add_player_parameters()
-enemy1 = Enemy.add_enemy_parameters()
-enemy2 = Enemy.add_enemy_parameters()
+color1 = Color(50, 100, 150)
+color2 = Color(50, 100, 150)
+Color.str(color1)
+Color.eq(color1, color2)
 
-get_all_enemies()
+
+# ----------------------------------------------------------------
+# # TASK 11
