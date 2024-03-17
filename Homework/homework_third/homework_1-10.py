@@ -229,7 +229,7 @@ import re
 
 #         Library.array_book.append(new_book)
 
-#     def delete_book():
+#     def delete_book()
 #         name = input("Enter book name what do you want delete: ")
 #         for book in Library.array_book:
 #             if book.name == name:
@@ -582,7 +582,10 @@ class AlphaColor(Color):
         )
 
 
-color2 = AlphaColor(color1, 1.0) 
-color2.set_alpha(0.5) 
-color2.update_color_by_alpha()  
-color2.str()  
+color2 = AlphaColor(color1, 1.0)
+color2.set_alpha(0.5)
+color2.update_color_by_alpha()
+color2.str()
+
+# ----------------------------------------------------------------
+# # TASK 12
