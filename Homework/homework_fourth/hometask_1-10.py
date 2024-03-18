@@ -20,3 +20,53 @@ from functools import reduce
 
 #________________________________________________________________
 #Task 2
+
+# def student_point_filter():
+
+#     students = ['Alexa', 'John', 'Nick', 'Michael']
+#     points = [6,9,10,8.5]
+
+#     #create 1 array with sutudent name and points
+#     new_list = list(zip(students,points))
+#     print(new_list) 
+#     #lambda filter by points
+#     students_hight = filter(lambda x: x[1] > 8.5 , new_list)
+#     print(list(students_hight))
+
+# student_point_filter()
+
+#________________________________________________________________
+#Task 3
+
+def sorted_students():
+
+    students = [
+        {
+            'name': 'Alexa',
+            'age': 19,
+            'avarage_point': 6
+        },
+          {
+            'name': 'John',
+            'age': 21,
+            'avarage_point': 8.5
+        },
+          {
+            'name': 'Igor',
+            'age': 43,
+            'avarage_point': 10
+        },
+          {
+            'name': 'Danila',
+            'age': 20,
+            'avarage_point': 10
+        },
+    ]
+
+    students_years = filter(lambda x: x['age'] > 21 , students)
+    students_points = sorted(students_years, key=lambda x: x['avarage_point'])
+
+    print(list(students_points))
+
+
+sorted_students()
