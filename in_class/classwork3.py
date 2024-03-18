@@ -89,3 +89,4 @@ planet = [("Merkur", 0.395), ("Venera", 0.72), ("Earth", 1)]
 sort_distance = lambda planet: planet[1]
 planet.sort(key=sort_distance, reverse=True)
 print(planet)
+
