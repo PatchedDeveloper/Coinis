@@ -2,6 +2,8 @@ import math
 import random
 from functools import reduce
 
+
+
 # Coinis_homework_2 by Danila Kardasehvskii
 
 # Domaći zadatak 4
@@ -88,27 +90,73 @@ from functools import reduce
 #________________________________________________________________
 #Task 5
 
-def avarage_point():
+# def avarage_point():
+#     students = [
+#         {
+#             'name': 'Alexa',
+#             'lesson_name': 'Math',
+#             'average_point': 10
+#         },
+#         {
+#             'name': 'John',
+#             'lesson_name': 'Math',
+#             'average_point': 8.5
+#         },
+#         {
+#             'name': 'Leila',
+#             'lesson_name': 'Informatics',
+#             'average_point': 10
+#         },
+#         {
+#             'name': 'Nika',
+#             'lesson_name': 'Informatics',
+#             'average_point': 7
+#         },
+#     ]
 
-        students = [
-        {
-            'name': 'Alexa',
-            'lesson_name': 'Math',
-            'avarage_point': 10
-        },
-          {
-            'name': 'John',
-            'lesson_name': 'Math',
-            'avarage_point': 8.5
-        },
-          {
-            'name': 'Alexa',
-            'lesson_name': 'Informatics',
-            'avarage_point': 10
-        },
-          {
-            'name': 'John',
-            'lesson_name': 'Informatics',
-            'avarage_point': 7
-        },
-    ]
+#     filtered_students = lambda lesson: filter(lambda x: x['lesson_name'] == lesson, students)
+    
+#     lesson_averages = lambda lesson: map(lambda x: x['average_point'], filtered_students(lesson))
+    
+#     average_points = lambda lesson: reduce(lambda x, y: x + y, lesson) / len(lesson)
+    
+#     unique_lessons = set(student['lesson_name'] for student in students)
+    
+#     for lesson in unique_lessons:
+#         lesson_avg = average_points(list(lesson_averages(lesson)))
+#         print(f"Average point for {lesson}: {lesson_avg}")
+
+# avarage_point()
+
+#________________________________________________________________
+#Task 6
+
+# def calculate_difference(time_series):
+#     differences = list(map(lambda x, y: y - x, time_series[:-1], time_series[1:]))
+#     return differences
+
+
+# time_series = [10, 15, 20, 18, 25, 30]
+
+# differences = calculate_difference(time_series)
+# print("Differences between successive::", differences)
+
+#________________________________________________________________
+#Task 7
+
+# def calculate_frequency(elements):
+    
+#     element_counts = map(lambda x: (x, elements.count(x)), elements)
+    
+#     merged_counts = reduce(lambda x, y: {**x, **y}, (dict([pair]) for pair in element_counts))
+    
+#     return merged_counts
+
+# elements_list = ['apple', 'banana', 'apple', 'orange', 'banana', 'apple']
+
+# frequency_dict = calculate_frequency(elements_list)
+# print("The sum of the elements:", frequency_dict)
+
+
+#________________________________________________________________
+#Task 8
