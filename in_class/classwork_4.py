@@ -147,11 +147,17 @@ import math
 #________________________________________________________________
 
 
-f = open('/Users/danilakardashevkii/Developer/Python/UDG/Coinis/in_class/text.txt')
-print(f.read())
-f.seek(0)
-print(f.read())
-f.close()
+f = open('*******/in_class/text.txt')
+saderzaj = f.read()
 
-f = open('/Users/danilakardashevkii/Developer/Python/UDG/Coinis/in_class/text.txt','a')
-f.write("\nNew text")
+redovi = saderzaj.split('\n')
+print(redovi)
+max_povrshina = 0
+for red in redovi:
+    stranice = red.split(',')
+    print(stranice[0], stranice[1])
+
+    if  stranice[0] == stranice[1]:
+        povrshina == int(stranice[0]) * int(stranice[1])
+        if povrshina > max_povrshina:
+            max_povrshina = povrshina
