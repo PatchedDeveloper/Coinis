@@ -36,32 +36,32 @@ import re
 # ----------------------------------------------------------------
 # TASK 2
 
-# def count_of_sets():
+def count_of_sets():
 
-#     a = [1, 2, 2, 2, 4, 4]
+    a = [1, 2, 2, 2, 4, 4]
 
-#     max_product = 1
-#     max_repeat_count = 1
-#     number = 0
+    max_product = 1
+    max_repeat_count = 1
+    number = 0
 
-#     for i in range(len(a)):
-#         repeat_count = 1
-#         for k in range(i+1, len(a)):
-#             if a[k] == a[i]:
-#                 repeat_count += 1
-#                 number = a[k]
-#             else:
-#                 break
-#         product = pow(a[i],repeat_count)
-#         if product > max_product:
-#             max_product = product
-#             max_repeat_count = repeat_count
+    for i in range(len(a)):
+        repeat_count = 1
+        for k in range(i+1, len(a)):
+            if a[k] == a[i]:
+                repeat_count += 1
+                number = a[k]
+            else:
+                break
+        product = pow(a[i],repeat_count)
+        if product > max_product:
+            max_product = product
+            max_repeat_count = repeat_count
 
-#     print("Max product:", max_product)
-#     print("Number of repetitions:", max_repeat_count," Number : ", number)
+    print("Max product:", max_product)
+    print("Number of repetitions:", max_repeat_count," Number : ", number)
 
 
-# count_of_sets()
+count_of_sets()
 
 # ----------------------------------------------------------------
 # TASK 3
