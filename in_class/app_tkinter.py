@@ -39,7 +39,15 @@ def refresh_listbox():
         listbox.insert(tk.END,f" {user['name']} - {user['email']} ")
 
 def delete_user():
-    pass
+    try:
+        selected = listbox.curselection()[0]
+        users=read_db()
+        users.pop(selected)
+        write_db(users)
+        refresh_listbox()
+        messagebox.showinfo("User deleted", f"User {users[selected]['name']} deleted successfully")
+    except IndexError:
+        messagebox.showerror("No user selected", "Please select a user to delete")
 
 #Label
 root = tk.Tk()
